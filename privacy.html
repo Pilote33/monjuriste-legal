@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CGU & Politique de confidentialité — LexiCSE</title>
+  <style>
+    :root {
+      --blue: #1B4FD8;
+      --blue-dark: #1340B0;
+      --amber: #F59E0B;
+      --bg: #F8FAFF;
+      --surface: #FFFFFF;
+      --border: #E2E8F8;
+      --text: #0F172A;
+      --text-sec: #475569;
+      --text-muted: #94A3B8;
+    }
+    [data-theme="dark"] {
+      --bg: #0A0F1E;
+      --surface: #111827;
+      --border: #1E293B;
+      --text: #F1F5F9;
+      --text-sec: #94A3B8;
+      --text-muted: #475569;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    header {
+      background: var(--blue);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header svg { flex-shrink: 0; }
+    .header-text h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+    }
+    .header-text p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px 60px;
+    }
+    .last-update {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--blue);
+      margin: 36px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+    p { margin-bottom: 12px; color: var(--text-sec); }
+    ul {
+      margin: 8px 0 16px 20px;
+      color: var(--text-sec);
+    }
+    ul li { margin-bottom: 6px; }
+    .highlight-box {
+      background: #EEF2FF;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    [data-theme="dark"] .highlight-box { background: #1E2A4A; }
+    .highlight-box p { color: var(--text); margin: 0; }
+    .warning-box {
+      background: #FEF3C7;
+      border-left: 4px solid var(--amber);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    [data-theme="dark"] .warning-box { background: #2A1F0A; }
+    .warning-box p { color: #92400E; margin: 0; }
+    [data-theme="dark"] .warning-box p { color: var(--amber); }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+    .contact-card a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+    .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--blue);
+      color: white;
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 700;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .toc h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .toc ol {
+      margin-left: 16px;
+      color: var(--blue);
+    }
+    .toc ol li {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+    .toc ol li a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .toc ol li a:hover { text-decoration: underline; }
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 20px 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .badge {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .badge.amber { background: var(--amber); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <circle cx="20" cy="20" r="20" fill="white" fill-opacity="0.15"/>
+      <rect x="12" y="11" width="4" height="18" rx="1.5" fill="white"/>
+      <rect x="17" y="14" width="11" height="2.5" rx="1" fill="white" opacity="0.9"/>
+      <rect x="17" y="19" width="9" height="2.5" rx="1" fill="white" opacity="0.9"/>
+      <rect x="17" y="24" width="10" height="2.5" rx="1" fill="white" opacity="0.9"/>
+      <circle cx="32" cy="11" r="7" fill="#F59E0B"/>
+      <text x="32" y="14.5" text-anchor="middle" font-size="7" font-weight="700" fill="white" font-family="sans-serif">IA</text>
+    </svg>
+    <div class="header-text">
+      <h1>LexiCSE — MonJuriste</h1>
+      <p>Conditions Générales d'Utilisation & Politique de Confidentialité</p>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="last-update">
+      📅 Dernière mise à jour : juillet 2026 — Version 1.0
+    </div>
+
+    <!-- Table des matières -->
+    <div class="toc">
+      <h3>Sommaire</h3>
+      <ol>
+        <li><a href="#presentation">Présentation de l'application</a></li>
+        <li><a href="#cgu">Conditions Générales d'Utilisation</a></li>
+        <li><a href="#donnees">Politique de confidentialité</a></li>
+        <li><a href="#ia">Intelligence Artificielle</a></li>
+        <li><a href="#sources">Sources juridiques</a></li>
+        <li><a href="#responsabilite">Limitation de responsabilité</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. Présentation -->
+    <h2 id="presentation"><span class="section-number">1</span>Présentation de l'application</h2>
+
+    <p>
+      <strong>LexiCSE</strong> (publiée sous le nom <strong>MonJuriste</strong> sur le Google Play Store)
+      est une application mobile Android conçue pour aider les membres de Comités Sociaux et Économiques
+      (CSE) et les salariés à accéder aux ressources juridiques en droit du travail français.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        ⚖️ LexiCSE est une application <strong>neutre et indépendante</strong>, sans affiliation
+        syndicale d'aucune sorte (CGT, CFDT, FO, CFE-CGC, CFTC ou autre).
+      </p>
+    </div>
+
+    <h3>Fonctionnalités principales</h3>
+    <ul>
+      <li>Recherche dans le Code du travail (via API Légifrance officielle)</li>
+      <li>Consultation des conventions collectives</li>
+      <li>Accès aux accords de branche et d'entreprise</li>
+      <li>Consultation de la jurisprudence (Cour de cassation, Conseil d'État)</li>
+      <li>Journal Officiel de la République Française</li>
+      <li>Assistant juridique IA (propulsé par Groq/Llama)</li>
+      <li>Calculateurs juridiques (préavis, congés, licenciement)</li>
+      <li>Identification d'entreprise par numéro SIRET</li>
+      <li>Historique des recherches</li>
+    </ul>
+
+    <!-- 2. CGU -->
+    <h2 id="cgu"><span class="section-number">2</span>Conditions Générales d'Utilisation</h2>
+
+    <h3>2.1 Acceptation des conditions</h3>
+    <p>
+      En téléchargeant et en utilisant l'application LexiCSE, vous acceptez sans réserve
+      les présentes Conditions Générales d'Utilisation. Si vous n'acceptez pas ces conditions,
+      veuillez désinstaller l'application.
+    </p>
+
+    <h3>2.2 Usage autorisé</h3>
+    <p>L'application est destinée à un usage :</p>
+    <ul>
+      <li>Personnel et professionnel pour les salariés et membres de CSE</li>
+      <li>Informatif et documentaire</li>
+      <li>Non commercial pour les utilisateurs individuels</li>
+    </ul>
+
+    <h3>2.3 Usage interdit</h3>
+    <p>Il est interdit de :</p>
+    <ul>
+      <li>Utiliser l'application à des fins illégales</li>
+      <li>Tenter de contourner les mesures de sécurité</li>
+      <li>Reproduire ou redistribuer le contenu sans autorisation</li>
+      <li>Utiliser l'application pour du conseil juridique professionnel rémunéré</li>
+    </ul>
+
+    <h3>2.4 Propriété intellectuelle</h3>
+    <p>
+      L'application LexiCSE, son interface, son logo et son code source sont protégés
+      par le droit de la propriété intellectuelle. Les textes juridiques affichés proviennent
+      de sources officielles (Légifrance) et sont soumis à leurs propres licences.
+    </p>
+
+    <h3>2.5 Modification des CGU</h3>
+    <p>
+      Nous nous réservons le droit de modifier ces CGU à tout moment. Les modifications
+      entrent en vigueur dès leur publication dans l'application.
+    </p>
+
+    <!-- 3. Confidentialité -->
+    <h2 id="donnees"><span class="section-number">3</span>Politique de confidentialité</h2>
+
+    <h3>3.1 Données collectées</h3>
+
+    <div class="highlight-box">
+      <p>
+        🔒 LexiCSE <strong>ne collecte aucune donnée personnelle identifiable</strong> :
+        pas de nom, prénom, email, numéro de téléphone ou adresse.
+      </p>
+    </div>
+
+    <p>Les seules données traitées sont :</p>
+
+    <h3>3.2 Authentification anonyme <span class="badge">Firebase</span></h3>
+    <p>
+      L'application utilise <strong>Firebase Authentication</strong> (Google) en mode
+      <strong>anonyme</strong>. Un identifiant unique anonyme est généré automatiquement
+      pour votre appareil. Cet identifiant ne permet pas de vous identifier personnellement.
+    </p>
+
+    <h3>3.3 Historique des recherches <span class="badge">Firebase</span></h3>
+    <p>
+      Vos termes de recherche sont sauvegardés dans <strong>Firebase Firestore</strong>
+      associés uniquement à votre identifiant anonyme. Ces données sont :
+    </p>
+    <ul>
+      <li>Stockées de manière sécurisée sur les serveurs Google Firebase</li>
+      <li>Accessibles uniquement depuis votre appareil</li>
+      <li>Supprimables à tout moment depuis l'onglet Historique de l'application</li>
+      <li>Non partagées avec des tiers</li>
+    </ul>
+
+    <h3>3.4 Recherche SIRET</h3>
+    <p>
+      La recherche par numéro SIRET interroge l'<strong>API publique de l'Annuaire des
+      Entreprises</strong> (api.gouv.fr). Le numéro SIRET saisi est transmis à cette API
+      publique mais n'est pas stocké par LexiCSE.
+    </p>
+
+    <h3>3.5 Données non collectées</h3>
+    <p>LexiCSE ne collecte pas :</p>
+    <ul>
+      <li>Données de localisation géographique</li>
+      <li>Contacts ou accès au répertoire</li>
+      <li>Photos ou médias</li>
+      <li>Données biométriques</li>
+      <li>Informations de paiement</li>
+      <li>Identité de l'utilisateur</li>
+    </ul>
+
+    <h3>3.6 Hébergement des données</h3>
+    <p>
+      Les données d'historique sont hébergées sur les serveurs <strong>Google Firebase</strong>
+      situés en Europe (région europe-west1). Google LLC est soumis au RGPD dans le cadre
+      de ses services aux utilisateurs européens.
+    </p>
+
+    <h3>3.7 Durée de conservation</h3>
+    <p>
+      Les données d'historique sont conservées jusqu'à leur suppression par l'utilisateur
+      ou la désinstallation de l'application.
+    </p>
+
+    <h3>3.8 Vos droits (RGPD)</h3>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> : accédez à vos données depuis l'onglet Historique</li>
+      <li><strong>Droit de suppression</strong> : supprimez vos données depuis l'onglet Historique</li>
+      <li><strong>Droit à la portabilité</strong> : vos données sont consultables dans l'application</li>
+      <li><strong>Droit d'opposition</strong> : vous pouvez ne pas utiliser la fonction historique</li>
+    </ul>
+
+    <!-- 4. IA -->
+    <h2 id="ia"><span class="section-number">4</span>Intelligence Artificielle</h2>
+
+    <h3>4.1 Technologie utilisée</h3>
+    <p>
+      L'assistant juridique IA de LexiCSE est propulsé par <strong>Groq</strong>
+      (modèle Llama 3.3 70B). Vos questions sont transmises aux serveurs Groq
+      pour générer une réponse.
+    </p>
+
+    <div class="warning-box">
+      <p>
+        ⚠️ <strong>Important :</strong> Les réponses de l'IA sont fournies à titre
+        informatif uniquement. Elles ne constituent pas un conseil juridique professionnel
+        et ne remplacent pas l'avis d'un avocat ou d'un juriste qualifié.
+      </p>
+    </div>
+
+    <h3>4.2 Données transmises à Groq</h3>
+    <p>
+      Vos questions posées à l'assistant IA sont transmises à l'API Groq. Ces données
+      sont soumises à la <a href="https://groq.com/privacy-policy/" style="color: var(--blue)">
+      politique de confidentialité de Groq</a>. Nous vous recommandons de ne pas inclure
+      d'informations personnelles sensibles dans vos questions.
+    </p>
+
+    <!-- 5. Sources -->
+    <h2 id="sources"><span class="section-number">5</span>Sources juridiques</h2>
+
+    <p>LexiCSE utilise les sources officielles suivantes :</p>
+    <ul>
+      <li>
+        <strong>Légifrance</strong> (DILA) — Code du travail, conventions collectives,
+        accords, jurisprudence, Journal Officiel
+        <br><em>Via l'API officielle PISTE (piste.gouv.fr)</em>
+      </li>
+      <li>
+        <strong>Annuaire des Entreprises</strong> (api.gouv.fr) — Recherche SIRET
+      </li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>
+        📖 Les textes juridiques affichés proviennent de sources officielles françaises.
+        Ils sont reproduits conformément aux conditions d'utilisation de l'API Légifrance
+        (PISTE/DILA).
+      </p>
+    </div>
+
+    <!-- 6. Responsabilité -->
+    <h2 id="responsabilite"><span class="section-number">6</span>Limitation de responsabilité</h2>
+
+    <h3>6.1 Nature informationnelle</h3>
+    <p>
+      LexiCSE est un outil d'information juridique. Les informations fournies sont
+      à caractère général et ne constituent pas un conseil juridique personnalisé.
+    </p>
+
+    <h3>6.2 Exactitude des informations</h3>
+    <p>
+      Bien que nous nous efforcions de fournir des informations exactes et à jour,
+      nous ne pouvons garantir l'exactitude, l'exhaustivité ou l'actualité de toutes
+      les informations affichées. Le droit évolue constamment.
+    </p>
+
+    <h3>6.3 Décisions juridiques</h3>
+    <p>
+      Toute décision juridique importante doit être prise en consultation avec un
+      professionnel du droit (avocat, juriste d'entreprise, inspection du travail).
+      LexiCSE décline toute responsabilité pour les décisions prises sur la base
+      des informations fournies par l'application.
+    </p>
+
+    <h3>6.4 Disponibilité</h3>
+    <p>
+      LexiCSE dépend de services tiers (Légifrance, Groq, Firebase). Nous ne pouvons
+      garantir une disponibilité permanente de toutes les fonctionnalités en cas
+      d'interruption de ces services.
+    </p>
+
+    <!-- 7. Contact -->
+    <h2 id="contact"><span class="section-number">7</span>Contact</h2>
+
+    <p>
+      Pour toute question concernant ces CGU ou notre politique de confidentialité,
+      vous pouvez nous contacter :
+    </p>
+
+    <div class="contact-card">
+      <p>📧 <strong>Email :</strong> <a href="mailto:contact@monjuriste.fr">contact@monjuriste.fr</a></p>
+      <p>📱 <strong>Application :</strong> LexiCSE — MonJuriste</p>
+      <p>🌐 <strong>Éditeur :</strong> MonJuriste</p>
+      <p style="margin-top: 12px; font-size: 13px; color: var(--text-muted);">
+        Nous nous engageons à répondre à vos demandes dans un délai de 30 jours ouvrés.
+      </p>
+    </div>
+
+    <div class="warning-box" style="margin-top: 32px;">
+      <p>
+        ⚖️ <strong>Rappel important :</strong> LexiCSE est une application neutre,
+        sans affiliation syndicale. Elle est destinée à informer les salariés et
+        membres de CSE sur leurs droits, sans parti pris politique ou syndical.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 MonJuriste — LexiCSE — Tous droits réservés</p>
+    <p style="margin-top: 4px;">Application neutre • Sans affiliation syndicale • Données protégées</p>
+  </footer>
+
+  <script>
+    // Appliquer le theme depuis l'app Android
+    var theme = localStorage.getItem('lx_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // Recevoir le theme depuis AndroidBridge si disponible
+    if (window.AndroidBridge) {
+      var androidTheme = window.AndroidBridge.getTheme();
+      if (androidTheme) {
+        document.documentElement.setAttribute('data-theme', androidTheme);
+      }
+    }
+  </script>
+
+</body>
+</html>
